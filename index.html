@@ -12,21 +12,24 @@
     <div id="fadeout">
       <div class="jumbotron">
         <h1><img src="img/mchammer.gif">Tamagotchi<span id="amazing-name"></span><img src="img/mchammer.gif"></h1>
-        <h2>Don't let it die! >;(</h2>
+        <h2>Don't let it <span id="strongly-encouraged">die!</span> >;(</h2>
         <form id="nameSpace" class="form-group">
           <label for="name">Please name your Tamagotchi:</label>
           <input type="submit/text" class="form-control" id="name" placeholder="Tamama">
         </form>
+        <img id="tama" src="img/tama.png">
       </div><!-- jumbotron -->
       <div class="container" id="gamePlay">
         <table class="table">
           <tr>
+            <td><h2>Life Points:</h2></td>
             <td><button class="btn btn-success" id="feed"></button></td>
             <td><button class="btn" id="purple"></button></td>
             <td><button class="btn btn-primary" id="rest"></button></td>
             <!--<td><button class="btn btn-danger" id="slay"></button></td>-->
           </tr>
           <tr>
+            <td><h2>Click These:</td></h2>
             <td><button class="round-button" id="food" type="submit">FEED ME!</button></td>
             <td><button class="round-button" id="play" type="submit">LET'S RIDE UNICORNS!</button></td>
             <td><button class="round-button" id="sleep" type="submit">SLEEPY TIME!</button></td>

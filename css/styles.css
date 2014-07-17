@@ -2,6 +2,10 @@ h1, h2, td {
   text-align: center;
 }
 
+#strongly-encouraged {
+  color: red;
+}
+
 #purple {
   background-color: #AD66C4;
   color: white;
@@ -29,6 +33,10 @@ h1, h2, td {
   display: hidden;
 }
 
+.jumbotron {
+  background-color: orange;
+}
+
 #nameSpace {
   width: 20%;
   text-align: center;
@@ -39,6 +47,22 @@ h1, h2, td {
 
 input {
   text-align: center;
+}
+
+.btn {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width:200px;
+    height:200px;
+    line-height:50px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50px;
+    text-align:center;
+    text-decoration:none;
+    box-shadow: 0 0 3px gray;
+    font-size:125px;
+    font-weight:bold;
 }
 
 #amazing-name {
@@ -90,6 +114,11 @@ input {
     background: #262626;
     -webkit-transform:rotate(-30deg);
 }
-img {
+h1 img {
   display: none;
+}
+
+img#tama {
+  float: right;
+  max-height: 30%;
 }

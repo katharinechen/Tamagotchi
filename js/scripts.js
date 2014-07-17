@@ -1,12 +1,10 @@
 var Tamagotchi = {
-
   initialize: function(realName) {
     this.name = realName;
     this.foodLevel = 10;
     this.sleepLevel = 10;
     this.activityLevel = 10;
   },
-
   timePasses: function() {
     this.foodLevel -= 1;
     this.sleepLevel -= 1;
@@ -15,19 +13,15 @@ var Tamagotchi = {
     $("#purple").text(this.activityLevel);
     $("#rest").text(this.sleepLevel);
   },
-
   isAlive: function() {
-
     if ((this.foodLevel > 0) && (this.sleepLevel > 0) && (this.activityLevel > 0)) {
       return true;
     } else {
       $("#fadeout").fadeOut();
       $("#you-died").fadeIn();
-
     }
   }
 }
-
 
 $(document).ready(function() {
   $("#feed").text(10);
@@ -45,8 +39,8 @@ $(document).ready(function() {
     $("#nameSpace").hide();
     $("#amazing-name").text(" " + cutePet.name);
 
-    setInterval(function(){ cutePet.timePasses() },500);
-    setInterval(function(){ cutePet.isAlive() },500);
+    setInterval(function(){ cutePet.timePasses() }, 600);
+    setInterval(function(){ cutePet.isAlive() }, 600);
 
     event.preventDefault();
 
@@ -73,12 +67,5 @@ $(document).ready(function() {
       }
       $("#rest").text(cutePet.sleepLevel);
     });
-
-
-
   });
-
-
-
-
 });
