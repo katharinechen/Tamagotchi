@@ -9,25 +9,34 @@
   </head>
 
   <body>
-    <div class="jumbotron">
-      <h1>Tamagotchi</h1>
-      <h2>Don't let them die! >;(</h2>
-    </div><!-- jumbotron -->
-    <div class="container">
-      <table class="table">
-        <tr>
-          <td><button class="btn btn-success">10</button></td>
-          <td><button class="btn" id="purple">10</button></td>
-          <td><button class="btn btn-primary">10</button></td>
-          <td><button class="btn btn-danger">10</button></td>
-        </tr>
-        <tr>
-          <td><button class="btn btn-success" type="submit">FEED ME!</button></td>
-          <td><button class="btn" id="purple" type="submit">LET'S RIDE UNICORNS!</button></td>
-          <td><button class="btn btn-primary" type="submit">SLEEPY TIME!</button></td>
-          <td><button class="btn btn-danger" type="submit">SLAY ME!</button></td>
-        </tr>
-      </table>
-    </div><!-- container -->
+    <div id="fadeout">
+      <div class="jumbotron">
+        <h1><img src="img/mchammer.gif">Tamagotchi<span id="amazing-name"></span><img src="img/mchammer.gif"></h1>
+        <h2>Don't let it die! >;(</h2>
+        <form id="nameSpace" class="form-group">
+          <label for="name">Please name your Tamagotchi:</label>
+          <input type="submit/text" class="form-control" id="name" placeholder="Tamama">
+        </form>
+      </div><!-- jumbotron -->
+      <div class="container" id="gamePlay">
+        <table class="table">
+          <tr>
+            <td><button class="btn btn-success" id="feed"></button></td>
+            <td><button class="btn" id="purple"></button></td>
+            <td><button class="btn btn-primary" id="rest"></button></td>
+            <!--<td><button class="btn btn-danger" id="slay"></button></td>-->
+          </tr>
+          <tr>
+            <td><button class="round-button" id="food" type="submit">FEED ME!</button></td>
+            <td><button class="round-button" id="play" type="submit">LET'S RIDE UNICORNS!</button></td>
+            <td><button class="round-button" id="sleep" type="submit">SLEEPY TIME!</button></td>
+            <!--<td><button class="round-button" type="submit">SLAY ME!</button></td>-->
+          </tr>
+        </table>
+      </div><!-- container -->
+    </div><!--fadeout-->
+    <div id="you-died">
+      <h1>IT WAS <strong>YOUR</strong> FAULT!!!</h1>
+    </div><!-- you-died -->
   </body>
 </html>
