@@ -5,41 +5,71 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>TAMAGOTCHI!!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Save your Tamagotchi!</title>
   </head>
 
   <body>
-    <div id="fadeout">
-      <div class="jumbotron">
-        <h1><img src="img/mchammer.gif">Tamagotchi<span id="amazing-name"></span><img src="img/mchammer.gif"></h1>
-        <h2>Don't let it <span id="strongly-encouraged">die!</span> >;(</h2>
-        <form id="nameSpace" class="form-group">
-          <label for="name">Please name your Tamagotchi:</label>
-          <input type="submit/text" class="form-control" id="name" placeholder="Tamama">
-        </form>
-        <img id="tama" src="img/tama.png">
-      </div><!-- jumbotron -->
-      <div class="container" id="gamePlay">
-        <table class="table">
-          <tr>
-            <td><h2>Life Points:</h2></td>
-            <td><button class="btn btn-success" id="feed"></button></td>
-            <td><button class="btn" id="purple"></button></td>
-            <td><button class="btn btn-primary" id="rest"></button></td>
-            <!--<td><button class="btn btn-danger" id="slay"></button></td>-->
-          </tr>
-          <tr>
-            <td><h2>Click These:</td></h2>
-            <td><button class="round-button" id="food" type="submit">FEED ME!</button></td>
-            <td><button class="round-button" id="play" type="submit">LET'S RIDE UNICORNS!</button></td>
-            <td><button class="round-button" id="sleep" type="submit">SLEEPY TIME!</button></td>
-            <!--<td><button class="round-button" type="submit">SLAY ME!</button></td>-->
-          </tr>
-        </table>
-      </div><!-- container -->
-    </div><!--fadeout-->
+    <div class="container-fluid">
+
+      <!-- Side Panel for Instructions  -->
+      <div class="col-md-3">
+        <h1>Instructions</h1>
+        The purpose of the game is to keep your tamagotchi alive.</br>
+
+        <ol>
+          <li>To keep your tamagotchi alive you must keep your life points for all three categories above 0.</li>
+          <li>Your life points will automatically start decreasing immediately after you submit a name for your Tamagotchi</li>
+          <li>To raise your life points for each category, you might click on the corresponding circle.</li>
+          <li>Click quickly!</li>
+        </ol>
+      </div>
+
+
+      <div class="col-md-9"><!-- main panel -->
+
+        <div id="fadeout">
+
+          <!--  Header with the name inputs-->
+          <div class="jumbotron">
+            <h1><img src="img/mchammer.gif">Tamagotchi<span id="amazing-name"></span><img src="img/mchammer.gif"></h1>
+            <h2>Don't let it <span id="strongly-encouraged">die!</span> >;(</h2>
+            <form id="nameSpace" class="form-group">
+              <label for="name">Please name your Tamagotchi:</label>
+              <input type="submit/text" class="form-control" id="name" placeholder="Tamama">
+            </form>
+          </div><!-- jumbotron -->
+
+          <!-- Game Controls -->
+          <div id="gamePlay">
+            <table class="table">
+              <tr>
+                <td><h2>Life Points:</h2></td>
+                <td><button class="btn btn-success" id="feed"></button></td>
+                <td><button class="btn" id="purple"></button></td>
+                <td><button class="btn btn-primary" id="rest"></button></td>
+                <!--<td><button class="btn btn-danger" id="slay"></button></td>-->
+              </tr>
+              <tr>
+                <td>
+                  <h2>Click These:</h2>
+                </td>
+                <td><button class="round-button" id="food" type="submit">FEED ME!</button></td>
+                <td><button class="round-button" id="play" type="submit">LET'S RIDE UNICORNS!</button></td>
+                <td><button class="round-button" id="sleep" type="submit">SLEEPY TIME!</button></td>
+                <!--<td><button class="round-button" type="submit">SLAY ME!</button></td>-->
+              </tr>
+            </table>
+          </div><!-- container -->
+
+        </div><!--fadeout-->
+      </div><!--main panel -->
+    </div> <!--container -->
+
+    <!-- Death notification -->
     <div id="you-died">
-      <h1>IT WAS <strong>YOUR</strong> FAULT!!!</h1>
+      <h1>Your tamagotchi passed away. Please try again by clicking a little bit faster!</h1>
     </div><!-- you-died -->
+
   </body>
 </html>

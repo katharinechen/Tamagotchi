@@ -1,10 +1,12 @@
 var Tamagotchi = {
+
   initialize: function(realName) {
     this.name = realName;
     this.foodLevel = 10;
     this.sleepLevel = 10;
     this.activityLevel = 10;
   },
+
   timePasses: function() {
     this.foodLevel -= 1;
     this.sleepLevel -= 1;
@@ -13,6 +15,7 @@ var Tamagotchi = {
     $("#purple").text(this.activityLevel);
     $("#rest").text(this.sleepLevel);
   },
+
   isAlive: function() {
     if ((this.foodLevel > 0) && (this.sleepLevel > 0) && (this.activityLevel > 0)) {
       return true;
@@ -29,9 +32,12 @@ $(document).ready(function() {
   $("#rest").text(10);
   $("#nameSpace").show();
 
+  // Once you submit the name, you will start the tamagotchi game
   $("#nameSpace").submit(function(event) {
     var cutePet = Object.create(Tamagotchi);
     cutePet.initialize($("#name").val());
+
+    //Easter egg (If you type in Hammer, you will get an awesome surprise)
     if((cutePet.name === "hammer") || (cutePet.name === "Hammer")) {
       $("img").show();
     }
